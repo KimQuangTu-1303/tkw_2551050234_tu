@@ -1,0 +1,24 @@
+{
+  "name": "tkw_2551050234_tu",
+  "version": "1.0.0",
+  "description": "Dưới đây là phần tổng quan dự án đã được điều chỉnh nội dung từ nền tảng xem phim sang Website Bán Máy Tính, đồng thời áp dụng chính xác các quy chuẩn thiết kế (Design System) bạn đã yêu cầu ở trên:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimQuangTu-1303/tkw_2551050234_tu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KimQuangTu-1303/tkw_2551050234_tu/issues"
+  },
+  "homepage": "https://github.com/KimQuangTu-1303/tkw_2551050234_tu#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}

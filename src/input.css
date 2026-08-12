@@ -1,0 +1,10 @@
+@import	"tailwindcss";
+@custom-variant	dark	
+(&:where(.dark,	.dark	*));			
+@theme	{
+		--color-brand-600:	#008374;
+		--color-ink:		#fefefe;
+		--font-display:	"OneLaptop",	system-ui,	sans-serif;
+		--font-body:	"Onelaptop",	system-ui,	sans-serif;
+		--radius-card:	0.875rem;
+}
