@@ -4,4 +4,4 @@ const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     mobileMenuBtn.addEventListener('click', () => {
         // Thêm/Xóa class 'hidden' để bật tắt menu
         mobileMenu.classList.toggle('hidden');
-    });
+        });
