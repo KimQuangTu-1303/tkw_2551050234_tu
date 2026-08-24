@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sản phẩm Laptop & Máy tính — OneLaptop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+    </style>
+</head>
+<body class="font-sans text-slate-900 bg-white dark:bg-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-5 flex items-center justify-between h-16">
+            <a href="index.html" class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">
+                laptop<span class="text-brand-600">One</span> — Kho Laptop
+            </a>
+            <nav>
+                <a href="index.html" class="text-sm font-medium text-brand-600 hover:underline">← Về trang chủ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-5 py-10">
+        <h1 class="text-3xl font-extrabold mb-6">Quản lý Kho Dữ liệu Laptop & Máy tính</h1>
+
+        <!-- Thanh công cụ: Tìm kiếm, Bộ lọc, Sắp xếp -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div>
+                <label for="search-input" class="block text-xs font-semibold uppercase text-slate-500 mb-1">Tìm kiếm máy tính</label>
+                <input type="text" id="search-input" placeholder="Gõ tên laptop/CPU..." class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-brand-500">
+            </div>
+            <div>
+                <label for="filter-category" class="block text-xs font-semibold uppercase text-slate-500 mb-1">Danh mục</label>
+                <select id="filter-category" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-sm">
+                    <option value="all">Tất cả danh mục</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Văn phòng">Văn phòng</option>
+                    <option value="Đồ họa">Đồ họa</option>
+                </select>
+            </div>
+            <div>
+                <label for="filter-status" class="block text-xs font-semibold uppercase text-slate-500 mb-1">Trạng thái kho</label>
+                <select id="filter-status" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-sm">
+                    <option value="all">Tất cả trạng thái</option>
+                    <option value="con-hang">Còn hàng</option>
+                    <option value="sap-ve">Sắp về</option>
+                    <option value="het-hang">Hết hàng</option>
+                </select>
+            </div>
+            <div>
+                <label for="sort-select" class="block text-xs font-semibold uppercase text-slate-500 mb-1">Sắp xếp</label>
+                <select id="sort-select" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-sm">
+                    <option value="date-desc">Mới nhất</option>
+                    <option value="amount-desc">Giá tiền cao nhất</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center mb-4">
+            <span id="record-count" class="text-sm font-medium text-slate-500">Đang tải danh sách...</span>
+            <button id="reset-storage-btn" class="text-xs text-red-600 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-lg font-semibold transition-colors">Khôi phục dữ liệu mẫu</button>
+        </div>
+
+        <!-- Khung bảng hiển thị dữ liệu laptop -->
+        <div class="overflow-x-auto border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 shadow-sm">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-100 dark:bg-slate-700 text-xs uppercase text-slate-600 dark:text-slate-300 tracking-wider">
+                        <th class="p-4">Mã SP</th>
+                        <th class="p-4">Tên dòng máy</th>
+                        <th class="p-4">Danh mục</th>
+                        <th class="p-4">Cấu hình (CPU / RAM)</th>
+                        <th class="p-4">Trạng thái</th>
+                        <th class="p-4 text-right">Giá bán</th>
+                        <th class="p-4">Ngày cập nhật</th>
+                        <th class="p-4 text-center">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="records-tbody" class="divide-y divide-slate-200 dark:divide-slate-700 text-sm">
+                    <!-- Trạng thái Loading (Khung xương) -->
+                    <tr>
+                        <td colspan="8" class="p-8 text-center text-slate-500 animate-pulse">Đang tải danh sách laptop từ máy chủ...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Template cho từng dòng laptop (Chống lỗi XSS bằng textContent) -->
+    <template id="row-template">
+        <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+            <td class="p-4 font-mono font-medium" data-cell="id"></td>
+            <td class="p-4 font-semibold text-brand-600" data-cell="laptopName"></td>
+            <td class="p-4" data-cell="category"></td>
+            <td class="p-4 text-slate-600 dark:text-slate-300 font-mono text-xs" data-cell="specs"></td>
+            <td class="p-4">
+                <span data-cell="status-badge" class="px-2.5 py-1 rounded-full text-xs font-bold"></span>
+            </td>
+            <td class="p-4 text-right font-bold text-slate-900 dark:text-white" data-cell="amount"></td>
+            <td class="p-4 text-slate-500" data-cell="date"></td>
+            <td class="p-4 text-center">
+                <button data-action="delete" class="text-red-500 hover:text-red-700 p-1 font-semibold text-xs bg-red-50 dark:bg-red-900/30 px-2 py-1 rounded">Xóa</button>
+            </td>
+        </tr>
+    </template>
+
+    <footer class="bg-slate-900 text-white py-6 mt-10 text-center text-sm text-slate-400">
+        © 2026 OneLaptop — Quản lý Sản phẩm Buổi 5
+    </footer>
+
+    <script type="module" src="./js/records.js"></script>
+</body>
+</html>

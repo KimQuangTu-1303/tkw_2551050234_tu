@@ -1,0 +1,272 @@
+[
+    {
+        "id": "PC-2607-001",
+        "trader": "Titan X-Gen 9",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 2500,
+        "amount": 117000000,
+        "date": "2026-07-26"
+    },
+    {
+        "id": "PC-2607-002",
+        "trader": "Creator Pro Studio",
+        "category": "Đồ họa",
+        "status": "dang-xu-ly",
+        "weight": 2100,
+        "amount": 75490000,
+        "date": "2026-07-25"
+    },
+    {
+        "id": "PC-2607-003",
+        "trader": "Stealth Blade 15",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 2100,
+        "amount": 52990000,
+        "date": "2026-07-24"
+    },
+    {
+        "id": "PC-2607-004",
+        "trader": "Vector G-16",
+        "category": "Văn phòng",
+        "status": "huy",
+        "weight": 1900,
+        "amount": 34590000,
+        "date": "2026-07-23"
+    },
+    {
+        "id": "PC-2607-005",
+        "trader": "Zenith Ultra Slim",
+        "category": "Văn phòng",
+        "status": "da-chot",
+        "weight": 1200,
+        "amount": 28990000,
+        "date": "2026-07-22"
+    },
+    {
+        "id": "PC-2607-006",
+        "trader": "ROG Strix Scar 17",
+        "category": "Gaming",
+        "status": "dang-xu-ly",
+        "weight": 2800,
+        "amount": 89000000,
+        "date": "2026-07-21"
+    },
+    {
+        "id": "PC-2607-007",
+        "trader": "MSI Raider GE78",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 2900,
+        "amount": 95000000,
+        "date": "2026-07-20"
+    },
+    {
+        "id": "PC-2607-008",
+        "trader": "MacBook Pro 16 M3 Max",
+        "category": "Đồ họa",
+        "status": "da-chot",
+        "weight": 2150,
+        "amount": 84990000,
+        "date": "2026-07-19"
+    },
+    {
+        "id": "PC-2607-009",
+        "trader": "Acer Predator Helios 16",
+        "category": "Gaming",
+        "status": "huy",
+        "weight": 2600,
+        "amount": 48990000,
+        "date": "2026-07-18"
+    },
+    {
+        "id": "PC-2607-010",
+        "trader": "Lenovo Legion Pro 7",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 2500,
+        "amount": 68990000,
+        "date": "2026-07-17"
+    },
+    {
+        "id": "PC-2607-011",
+        "trader": "Dell XPS 15 9530",
+        "category": "Văn phòng",
+        "status": "dang-xu-ly",
+        "weight": 1860,
+        "amount": 54990000,
+        "date": "2026-07-16"
+    },
+    {
+        "id": "PC-2607-012",
+        "trader": "HP Omen Transcend 14",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 1630,
+        "amount": 46990000,
+        "date": "2026-07-15"
+    },
+    {
+        "id": "PC-2607-013",
+        "trader": "Gigabyte Aorus 16X",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 2300,
+        "amount": 41990000,
+        "date": "2026-07-14"
+    },
+    {
+        "id": "PC-2607-014",
+        "trader": "Asus Zenbook 14 OLED",
+        "category": "Văn phòng",
+        "status": "huy",
+        "weight": 1200,
+        "amount": 25990000,
+        "date": "2026-07-13"
+    },
+    {
+        "id": "PC-2607-015",
+        "trader": "MSI Creator Z16",
+        "category": "Đồ họa",
+        "status": "da-chot",
+        "weight": 2200,
+        "amount": 62000000,
+        "date": "2026-07-12"
+    },
+    {
+        "id": "PC-2607-016",
+        "trader": "Razer Blade 18",
+        "category": "Gaming",
+        "status": "dang-xu-ly",
+        "weight": 3100,
+        "amount": 125000000,
+        "date": "2026-07-11"
+    },
+    {
+        "id": "PC-2607-017",
+        "trader": "Dell Inspiron 16 Plus",
+        "category": "Văn phòng",
+        "status": "da-chot",
+        "weight": 2050,
+        "amount": 31990000,
+        "date": "2026-07-10"
+    },
+    {
+        "id": "PC-2607-018",
+        "trader": "Lenovo ThinkPad X1 Carbon",
+        "category": "Văn phòng",
+        "status": "da-chot",
+        "weight": 1120,
+        "amount": 43990000,
+        "date": "2026-07-09"
+    },
+    {
+        "id": "PC-2607-019",
+        "trader": "Acer Swift Go 14",
+        "category": "Văn phòng",
+        "status": "huy",
+        "weight": 1300,
+        "amount": 21990000,
+        "date": "2026-07-08"
+    },
+    {
+        "id": "PC-2607-020",
+        "trader": "HP Envy x360",
+        "category": "Văn phòng",
+        "status": "da-chot",
+        "weight": 1420,
+        "amount": 27990000,
+        "date": "2026-07-07"
+    },
+    {
+        "id": "PC-2607-021",
+        "trader": "MSI Katana 15",
+        "category": "Gaming",
+        "status": "dang-xu-ly",
+        "weight": 2250,
+        "amount": 29990000,
+        "date": "2026-07-06"
+    },
+    {
+        "id": "PC-2607-022",
+        "trader": "Gigabyte G5 KF",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 2080,
+        "amount": 24990000,
+        "date": "2026-07-05"
+    },
+    {
+        "id": "PC-2607-023",
+        "trader": "Asus TUF Gaming F15",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 2200,
+        "amount": 27500000,
+        "date": "2026-07-04"
+    },
+    {
+        "id": "PC-2607-024",
+        "trader": "MacBook Air 15 M3",
+        "category": "Văn phòng",
+        "status": "huy",
+        "weight": 1510,
+        "amount": 37990000,
+        "date": "2026-07-03"
+    },
+    {
+        "id": "PC-2607-025",
+        "trader": "Surface Laptop 7",
+        "category": "Văn phòng",
+        "status": "da-chot",
+        "weight": 1340,
+        "amount": 39990000,
+        "date": "2026-07-02"
+    },
+    {
+        "id": "PC-2607-026",
+        "trader": "LG Gram 17",
+        "category": "Văn phòng",
+        "status": "dang-xu-ly",
+        "weight": 1350,
+        "amount": 41990000,
+        "date": "2026-07-01"
+    },
+    {
+        "id": "PC-2607-027",
+        "trader": "Alienware m18 R2",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 4230,
+        "amount": 115000000,
+        "date": "2026-06-30"
+    },
+    {
+        "id": "PC-2607-028",
+        "trader": "Framework Laptop 16",
+        "category": "Gaming",
+        "status": "da-chot",
+        "weight": 2100,
+        "amount": 65000000,
+        "date": "2026-06-29"
+    },
+    {
+        "id": "PC-2607-029",
+        "trader": "System76 Serval WS",
+        "category": "Đồ họa",
+        "status": "huy",
+        "weight": 3500,
+        "amount": 82000000,
+        "date": "2026-06-28"
+    },
+    {
+        "id": "PC-2607-030",
+        "trader": "MSI Prestige 16 AI",
+        "category": "Văn phòng",
+        "status": "da-chot",
+        "weight": 1500,
+        "amount": 36990000,
+        "date": "2026-06-27"
+    }
+]
