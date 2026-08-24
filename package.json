@@ -4,7 +4,8 @@
   "description": "Dưới đây là phần tổng quan dự án đã được điều chỉnh nội dung từ nền tảng xem phim sang Website Bán Máy Tính, đồng thời áp dụng chính xác các quy chuẩn thiết kế (Design System) bạn đã yêu cầu ở trên:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx serve"
   },
   "repository": {
     "type": "git",
