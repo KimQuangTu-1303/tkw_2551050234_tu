@@ -1,39 +1,20 @@
-/* ============================================================
-   src/input.css  —  KẾT QUẢ BUỔI 1
-   ------------------------------------------------------------
-   Mọi màu, phông chữ, bo góc của dự án khai báo MỘT LẦN ở đây.
-   Trong HTML tuyệt đối không viết bg-[#14705a].
-   ============================================================ */
+
 
 @import "tailwindcss";
 
-/* Dark mode theo class trên thẻ <html>.
-   Khai báo sẵn từ buổi 1, đến buổi 3 mới dùng tới. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-
-/* ============================================================
-   DESIGN TOKEN  —  trích từ Figma ở tiết 1
-   ------------------------------------------------------------
-   TODO: nếu bạn làm sản phẩm khác, thay toàn bộ giá trị dưới đây
-   bằng bảng token bạn đã đọc từ Figma. Đổi ở đây là cả trang đổi
-   theo, không phải sửa từng file HTML.
-   ============================================================ */
 @theme {
-  /* Màu thương hiệu: xanh lá đậm, lấy từ màu lá dứa */
-  --color-brand-50:  #eef7f3;
+
+  --color-brand-50:  #0056D2;
   --color-brand-100: #d6ebe3;
   --color-brand-500: #1f8a6d;
   --color-brand-600: #14705a;
   --color-brand-700: #0f5a49;
   --color-brand-900: #0a3b31;
-
-  /* Màu nhấn: vàng sáp. Dùng RẤT tiết chế — mỗi trang tối đa 3 chỗ */
   --color-accent-300: #f7d27a;
   --color-accent-400: #f0b429;
   --color-accent-500: #d99a15;
-
-  /* Chữ và nền. Mỗi vai trò có một cặp sáng/tối để buổi 3 dùng lại */
   --color-ink:          #12211d;
   --color-ink-invert:   #eaf2ee;
   --color-muted:        #5c6f69;
@@ -44,25 +25,17 @@
   --color-surface-alt:  #f5f8f6;
   --color-surface-dark: #0e1c19;
   --color-surface-dark-alt: #14312b;
-
-  /* Phông chữ. Be Vietnam Pro thiết kế riêng cho dấu tiếng Việt:
-     dấu không đè lên chữ hoa. Inter đọc tốt ở cỡ nhỏ. */
   --font-display: "Be Vietnam Pro", system-ui, sans-serif;
   --font-body:    "Inter", system-ui, sans-serif;
 
-  /* Bo góc — một giá trị duy nhất cho mọi thẻ trong dự án */
   --radius-card: 0.875rem;
   --radius-pill: 999px;
 }
 
-
-/* ============================================================
-   LỚP NỀN
-   ============================================================ */
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;   /* chừa chỗ cho navbar dính */
+    scroll-padding-top: 5rem;   
   }
 
   body {
@@ -73,32 +46,17 @@
     @apply font-display tracking-tight;
   }
 
-  /* Người dùng bàn phím phải luôn nhìn thấy mình đang ở đâu.
-     Khai báo một lần ở đây, cả dự án được lợi. */
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-brand-600;
   }
 }
 
-
-/* ============================================================
-   COMPONENT
-   ------------------------------------------------------------
-   Quy tắc: một mẫu chỉ đưa vào đây khi lặp lại TỪ 3 LẦN TRỞ LÊN.
-   Buổi 3 sẽ bổ sung thêm khi dựng trang thứ hai và thứ ba.
-
-   Cách dùng: GHÉP class ở HTML  →  class="btn btn-primary"
-   KHÔNG viết .btn-primary { @apply btn ... } vì trong Tailwind v4
-   cách đó dễ gãy.
-   ============================================================ */
 @layer components {
 
-  /* Container chuẩn của mọi section, dùng cho toàn bộ trang */
   .section {
     @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
   }
 
-  /* Dòng chữ nhỏ in hoa nằm trên mỗi tiêu đề section */
   .eyebrow {
     @apply font-display text-xs font-semibold uppercase tracking-[0.18em] text-brand-600;
   }
@@ -120,13 +78,6 @@
   .badge {
     @apply inline-flex items-center gap-1.5 rounded-pill px-3 py-1 text-xs font-semibold;
   }
-
-  /* ----------------------------------------------------------
-     KHỐI ĐẶC TRƯNG của sản phẩm này: tờ phiếu cân giấy, mép dưới
-     có đường răng cưa như phiếu xé từ cuốn biên lai.
-     Cả trang chỉ dùng MỘT chi tiết táo bạo, còn lại giữ kỷ luật.
-     Sản phẩm của bạn cũng nên có một khối tương tự — và chỉ một.
-     ---------------------------------------------------------- */
   .ticket {
     @apply relative rounded-card border border-line bg-surface p-6 shadow-xl;
   }

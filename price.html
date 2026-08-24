@@ -1,98 +1,68 @@
 <!DOCTYPE html>
 <html lang="vi" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>OneLaptop — Cửa hàng máy tính & laptop chính hãng</title>
-    <meta name="description"
-        content="OneLaptop cung cấp các dòng laptop, PC gaming, linh kiện máy tính chính hãng cấu hình mạnh, bảo hành uy tín và giá tốt nhất."[cite: 2] />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Nhúng Font Inter -->
-       <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="./dist/output.css" />
-    
+    <title>OneLaptop — Cửa hàng máy tính & laptop chính hãng</title>
+    <meta name="description" content="OneLaptop cung cấp các dòng laptop, PC gaming, linh kiện máy tính chính hãng cấu hình mạnh, bảo hành uy tín và giá tốt nhất." />
+
+    <link href="dist/output.css" rel="stylesheet">
 </head>
 <body>
 
-   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-5 flex items-center justify-between h-16">
-            <!-- Logo -->
-            <a href="index.html" class="font-extrabold text-xl tracking-tight text-slate-900">
+            <a href="index.html" class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">
                 laptop<span class="text-brand-600">One</span>
             </a>
 
-            <!-- Wrapper chứa Desktop Nav và Mobile Button (đặt trong header của bạn) -->
             <div class="flex items-center justify-between">
-
-                <!-- Nav Links (Desktop) - Giữ nguyên code của bạn -->
                 <nav class="hidden md:block">
-                    <ul class="flex items-center gap-8 text-sm font-medium text-slate-600">
-                        <li><a href="#" class="text-brand-600 border-b-2 border-brand-600 pb-1">Sản phẩm</a></li>
+                    <ul class="flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300 mr-8">
+                        <li><a href="/index.html" class="hover:text-brand-600 transition-colors">Sản phẩm</a></li>
                         <li><a href="#" class="hover:text-brand-600 transition-colors">Build cấu hình</a></li>
-                        <li><a href="/price.html" class="hover:text-brand-600 transition-colors">Bảng giá</a></li>
+                        <li><a href="/price.html" class="text-brand-600 border-b-2 border-brand-600 pb-1">Bảng giá</a></li>
                         <li><a href="#" class="hover:text-brand-600 transition-colors">Hội viên</a></li>
                         <li><a href="#" class="hover:text-brand-600 transition-colors">Liên hệ</a></li>
                     </ul>
                 </nav>
-                                      <!-- Icons -->
-            <div class="flex items-center gap-4 text-slate-600">
-                <button class="hover:text-brand-600">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                        </path>
-                    </svg>
-                </button>
-                <button class="hover:text-brand-600">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                    </svg>
-                </button>
-                </div>
-            </div>
 
-                <!-- Nút Hamburger (Chỉ hiện trên Mobile) -->
-                <button id="mobile-menu-btn"
-                    class="block md:hidden text-slate-600 hover:text-brand-600 focus:outline-none" aria-label="Mở menu">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
+                <!-- Nút Dark Mode -->
+                <button id="theme-toggle" type="button" aria-label="Chuyển đổi giao diện sáng/tối" aria-pressed="false" class="mr-4 p-2.5 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors">
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"/>
+                    </svg>
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
                     </svg>
                 </button>
-            </div>
 
-            <!-- Nav Links (Mobile) - Hiển thị dạng xổ xuống -->
-            <nav id="mobile-menu"
-                class="hidden md:hidden absolute left-0 top-full w-full bg-white shadow-lg border-t border-gray-100 z-50">
-                <ul class="flex flex-col px-5 py-4 gap-4 text-base font-medium text-slate-600">
-                    <li><a href="#" class="block text-brand-600 font-semibold">Sản phẩm</a></li>
-                    <li><a href="#" class="block hover:text-brand-600 transition-colors">Build cấu hình</a></li>
-                    <li><a href="/price.html" class="block hover:text-brand-600 transition-colors">Bảng giá</a></li>
-                    <li><a href="#" class="block hover:text-brand-600 transition-colors">Hội viên</a></li>
-                    <li><a href="#" class="block hover:text-brand-600 transition-colors">Liên hệ</a></li>
-                </ul>
-                 <div class="flex items-center gap-4 text-slate-600">
-                <button class="hover:text-brand-600">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                        </path>
-                    </svg>
-                </button>
-                <button class="hover:text-brand-600">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                    </svg>
-                </button>
-            </div>
-            </nav>
-          
-        </div>
+                <!-- Nút Hamburger Mobile -->
+          <!-- Nút Hamburger Mobile -->
+          <button id="mobile-menu-btn" aria-expanded="false" aria-label="Mở menu" class="block md:hidden p-1 rounded-lg text-slate-600 dark:text-slate-300 hover:text-brand-600 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors group">
+            <!-- Icon Menu (Hamburger) - Tự động ẩn khi aria-expanded="true" -->
+            <svg class="w-7 h-7 block group-aria-expanded:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            
+            <!-- Icon Đóng (X) - Tự động hiện khi aria-expanded="true" -->
+            <svg class="w-7 h-7 hidden group-aria-expanded:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden absolute left-0 top-full w-full bg-white dark:bg-slate-900 shadow-lg border-t border-gray-100 dark:border-slate-800 z-50">
+        <ul class="flex flex-col px-5 py-4 gap-4 text-base font-medium text-slate-600 dark:text-slate-300">
+            <li><a href="#" class="block text-brand-600 font-semibold">Sản phẩm</a></li>
+            <li><a href="#" class="block hover:text-brand-600 transition-colors">Build cấu hình</a></li>
+            <li><a href="/price.html" class="block hover:text-brand-600 transition-colors">Bảng giá</a></li>
+            <li><a href="#" class="block hover:text-brand-600 transition-colors">Hội viên</a></li>
+            <li><a href="#" class="block hover:text-brand-600 transition-colors">Liên hệ</a></li>
+        </ul>
+    </nav>
     </header>
  <main>
      <!-- CÁ NHÂN HÓA CẤU HÌNH -->
