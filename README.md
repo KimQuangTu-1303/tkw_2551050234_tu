@@ -68,3 +68,9 @@ Chất lượng cam kết: Cung cấp máy chính hãng, chất lượng đảm 
 | `16px` | `rounded-2xl` | Thẻ tính năng (Feature Cards), Bảng giá |
 | `24px` | `rounded-3xl` | Card nổi bật Hero Section |
 | `999px` | `rounded-full` | Nút số thứ tự, Avatar |
+Các breakpoints:
+sm: dùng cho màn hình nhỏ / điện thoại xoay ngang 
+md: máy tính bảng /tablet 
+lg: màn hình máy tính xách tay / laptop 
+xl: màn hình hình máy tính lớn /destop
+2xl: màn hình có độ phân giải cực lớn 
