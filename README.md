@@ -21,10 +21,10 @@ Chất lượng cam kết: Cung cấp máy chính hãng, chất lượng đảm 
 
 ###  Bảng màu (Color Palette)
 #### Màu thương hiệu chính
---color-brand-600: #2563EB;
+--color-brand-600: #0056D2;
 
 #### Màu nhấn
---color-accent-500: #FFFFFF;
+--color-accent-500: #ADD8E6;
 
 #### Chữ chính
 --color-ink: #111827;
