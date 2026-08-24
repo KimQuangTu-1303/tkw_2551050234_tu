@@ -20,5 +20,9 @@
   "homepage": "https://github.com/KimQuangTu-1303/tkw_2551050234_tu#readme",
   "dependencies": {
     "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4",
+    "tailwindcss": "^4.3.3"
   }
 }
